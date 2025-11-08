@@ -12,7 +12,7 @@
 
 EAPI=8
 
-inherit toolchain-funcs
+inherit multilib toolchain-funcs
 
 DESCRIPTION="Graph-native programming language with meta-programming"
 HOMEPAGE="https://kc3-lang.org/ https://git.kmx.io/kc3-lang/kc3"
@@ -68,14 +68,8 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-	if ! use debug; then
-		find "${D}" -name '*_debug.so*' -delete || die
-	fi
-	if ! use asan; then
-		find "${D}" -name '*_asan.so*' -delete || die
-	fi
-	if ! use cov; then
-		find "${D}" -name '*_cov.so*' -delete || die
+	if [[ "$(get_libdir)" != "lib" ]]; then
+		mv "${D}"/usr/lib "${D}"/usr/"$(get_libdir)" || die
 	fi
 	einstalldocs
 	dodoc README.md
