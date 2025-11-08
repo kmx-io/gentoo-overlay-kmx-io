@@ -22,7 +22,7 @@ if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="https://git.kmx.io/kc3-lang/kc3.git"
 else
 	SRC_URI="https://git.kmx.io/kc3-lang/kc3/release/_blob/master/v${PV}/kc3-${PV}.tar.gz"
-	S="${WORKDIR}/kc3"
+	S="${WORKDIR}/kc3-${PV}"
 	KEYWORDS="~amd64 ~arm64 ~x86 ~sparc"
 fi
 
