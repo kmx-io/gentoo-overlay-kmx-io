@@ -53,7 +53,10 @@ src_configure() {
 }
 
 src_compile() {
-	local target="all"
+	local target="build"
+	! use asan || target="${target} asan"
+	! use cov || target="${target} cov"
+	! use debug || target="${target} debug"
 	emake ${target}
 }
 
@@ -64,6 +67,17 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install
+
+	if ! use debug; then
+		find "${D}" -name '*_debug.so*' -delete || die
+	fi
+	if ! use asan; then
+		find "${D}" -name '*_asan.so*' -delete || die
+	fi
+	if ! use cov; then
+		find "${D}" -name '*_cov.so*' -delete || die
+	fi
+
 	einstalldocs
 	dodoc README.md
 }
