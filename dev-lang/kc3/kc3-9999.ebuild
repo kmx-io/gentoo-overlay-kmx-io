@@ -43,8 +43,6 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
-EGIT_OVERRIDE_BRANCH_KC3_LANG_LIBTOMMATH="v1.2"
-
 src_configure() {
 	local myconf=(
 		--prefix="${EPREFIX}/usr"
