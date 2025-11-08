@@ -35,7 +35,7 @@ RDEPEND="
 	virtual/libiconv
 	virtual/libffi
 	dev-libs/libbsd
-	dev-libs/libmd
+	app-crypt/libmd
 	gtk? ( gui-libs/gtk:4 )
 "
 DEPEND="${RDEPEND}"
