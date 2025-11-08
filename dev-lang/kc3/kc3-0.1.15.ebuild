@@ -26,7 +26,7 @@ else
 	KEYWORDS="~amd64 ~arm64 ~x86 ~sparc"
 fi
 
-LICENSE="ISC"
+LICENSE="Copyrighted"
 SLOT="0"
 IUSE="asan cov debug gtk test"
 RESTRICT="!test? ( test )"
@@ -47,41 +47,21 @@ src_configure() {
 	local myconf=(
 		--prefix="${EPREFIX}/usr"
 	)
-
 	./configure "${myconf[@]}" || die "configure failed"
 }
 
 src_compile() {
 	local target="all"
-
-	if use debug; then
-		target="debug"
-	elif use asan; then
-		target="asan"
-	elif use cov; then
-		target="cov"
-	fi
-
 	emake ${target}
 }
 
 src_test() {
-	local target="test"
-
-	if use debug; then
-		target="test_debug"
-	elif use asan; then
-		target="test_asan"
-	elif use cov; then
-		target="test_cov"
-	fi
-
+	local target="check"
 	emake ${target}
 }
 
 src_install() {
 	emake DESTDIR="${D}" install
-
 	einstalldocs
 	dodoc README.md
 }
