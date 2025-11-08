@@ -46,7 +46,8 @@ BDEPEND="
 
 src_configure() {
 	local myconf=(
-		--prefix="${EPREFIX}/usr"
+		--prefix
+		"${EPREFIX}/usr"
 	)
 	./configure "${myconf[@]}" || die "configure failed"
 }
