@@ -20,10 +20,11 @@ HOMEPAGE="https://kc3-lang.org/ https://git.kmx.io/kc3-lang/kc3"
 if [[ ${PV} == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://git.kmx.io/kc3-lang/kc3.git"
-	KEYWORDS="~amd64 ~arm64 ~x86 ~sparc"
+	KEYWORDS="~amd64 ~arm64 ~x86"
 else
 	SRC_URI="https://git.kmx.io/kc3-lang/kc3/release/_blob/master/v${PV}/kc3-${PV}.tar.gz"
 	S="${WORKDIR}/kc3-${PV}"
+	KEYWORDS="amd64 arm64 x86"
 fi
 
 LICENSE="kmx-io-use-only"
