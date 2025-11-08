@@ -32,11 +32,11 @@ IUSE="asan cov debug gtk test"
 RESTRICT="!test? ( test )"
 
 RDEPEND="
-	virtual/libiconv
-	virtual/libffi
-	dev-libs/libbsd
 	app-crypt/libmd
+	dev-libs/libbsd
+	dev-libs/libffi
 	gtk? ( gui-libs/gtk:4 )
+	virtual/libiconv
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
