@@ -26,7 +26,7 @@ else
 	KEYWORDS="~amd64 ~arm64 ~x86 ~sparc"
 fi
 
-LICENSE="Copyrighted"
+LICENSE="kmx-io-use-only"
 SLOT="0"
 IUSE="asan cov debug gtk test"
 RESTRICT="!test? ( test )"
