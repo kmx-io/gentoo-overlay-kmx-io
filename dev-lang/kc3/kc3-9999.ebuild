@@ -41,6 +41,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
+	sys-process/runj
 	virtual/pkgconfig
 "
 
