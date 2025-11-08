@@ -1,4 +1,2 @@
 # Package masks for kmx.io overlay
-# Keep this file to prevent external mask inheritance issues
-
-dev-lang/kc3 ~amd64
+# Currently no packages are masked
