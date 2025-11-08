@@ -1,5 +1,4 @@
 # Copyright 2022-2025 kmx.io
-# Distributed under the terms of the ISC License
 
 EAPI=8
 
@@ -12,7 +11,7 @@ if [[ ${PV} == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://git.kmx.io/kc3-lang/kc3.git"
 else
-	SRC_URI="https://git.kmx.io/kc3-lang/kc3/-/archive/v${PV/_pre/-git}/kc3-v${PV/_pre/-git}.tar.gz"
+	SRC_URI="https://git.kmx.io/kc3-lang/kc3/release/_blob/master/v${PV}/kc3-${PV}.tar.gz"
 	S="${WORKDIR}/kc3"
 	KEYWORDS="~amd64 ~arm64 ~x86 ~sparc"
 fi
