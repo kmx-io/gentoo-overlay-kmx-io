@@ -2,7 +2,7 @@
 <!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
 <repositories xmlns="" version="1.0">
   <repo quality="experimental" status="unofficial">
-    <name>kmx</name>
+    <name>kmx.io</name>
     <description lang="en">kmx.io overlay for KC3 and related projects</description>
     <homepage>https://kmx.io/</homepage>
     <owner type="person">
