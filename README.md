@@ -8,7 +8,7 @@ Gentoo overlay for KC3 and related kmx.io projects.
 
 ```bash
 # Add the overlay
-eselect repository add kmx.io git https://git.kmx.io/kmx.io/gentoo-overlay-kmx-io.git
+eselect repository add kmx-io git https://git.kmx.io/kmx.io/gentoo-overlay-kmx-io.git
 
 # Sync the overlay
 emerge --sync kmx.io
@@ -59,4 +59,14 @@ emerge dev-lang/kc3
 
 ## License
 
-ISC License - See individual ebuilds for details
+Copyright from 2022 to 2025 kmx.io <contact@kmx.io>
+
+Permission is hereby granted to use this software granted
+the above copyright notice and this permission paragraph
+are included in all copies and substantial portions of this
+software.
+
+THIS SOFTWARE IS PROVIDED "AS-IS" WITHOUT ANY GUARANTEE OF
+PURPOSE AND PERFORMANCE. IN NO EVENT WHATSOEVER SHALL THE
+AUTHOR BE CONSIDERED LIABLE FOR THE USE AND PERFORMANCE OF
+THIS SOFTWARE.
