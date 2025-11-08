@@ -50,6 +50,18 @@ emerge dev-lang/kc3
 - `gtk` - Enable GTK4 window support
 - `test` - Run test suite
 
+### sys-process/runj
+
+Run UNIX commands in parallel with line-buffered I/O
+
+```bash
+emerge sys-process/runj
+```
+
+A C89, BSD-licensed utility to run a UNIX command in multiple
+sub-processes with line-buffered standard input and output. Perfect for
+parallelizing shell scripts and test infrastructure.
+
 ## Links
 
 - [KC3 Website](https://kc3-lang.org/)
