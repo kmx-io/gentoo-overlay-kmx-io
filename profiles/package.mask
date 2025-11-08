@@ -1,0 +1,2 @@
+# Package masks for kmx.io overlay
+# Keep this file to prevent external mask inheritance issues
