@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>contact@kmx.io</email>
+		<name>kmx.io</name>
+	</maintainer>
+	<longdescription lang="en">
+		KC3 is a programming language with meta-programming and a graph
+		database embedded into the language. It aims to be the language
+		for semantic programming, and programming the semantic web.
+
+		KC3 is inspired by C, Elixir and Common Lisp. It could be
+		described as C with Elixir modules, pattern matching, and a
+		semantic object system.
+	</longdescription>
+	<use>
+		<flag name="asan">Build with AddressSanitizer for memory
+		debugging</flag>
+		<flag name="cov">Build with code coverage instrumentation</flag>
+		<flag name="gtk">Enable GTK4 window support</flag>
+	</use>
+	<upstream>
+		<remote-id type="git">https://git.kmx.io/kc3-lang/kc3</remote-id>
+		<bugs-to>https://github.com/kc3-lang/kc3/issues</bugs-to>
+		<doc lang="en">https://kc3-lang.org/doc/</doc>
+	</upstream>
+</pkgmetadata>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>kmx</name>
+    <description lang="en">kmx.io overlay for KC3 and related projects</description>
+    <homepage>https://kmx.io/</homepage>
+    <owner type="person">
+      <email>contact@kmx.io</email>
+      <name>kmx.io</name>
+    </owner>
+    <source type="git">https://git.kmx.io/kmx.io/gentoo-overlay-kmx-io.git</source>
+    <source type="git">git@git.kmx.io:kmx.io/gentoo-overlay-kmx-io.git</source>
+  </repo>
+</repositories>
