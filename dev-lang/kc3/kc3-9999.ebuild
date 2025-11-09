@@ -49,6 +49,8 @@ src_configure() {
 	local myconf=(
 		--prefix
 		"${EPREFIX}/usr"
+		--libdir
+		"${EPREFIX}/usr/$(get_libdir)"
 	)
 	./configure "${myconf[@]}" || die "configure failed"
 }
@@ -68,9 +70,6 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-	if [[ "$(get_libdir)" != "lib" ]]; then
-		mv "${D}"/usr/lib "${D}"/usr/"$(get_libdir)" || die
-	fi
 	einstalldocs
 	dodoc README.md
 }
