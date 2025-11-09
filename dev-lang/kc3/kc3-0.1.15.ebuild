@@ -63,7 +63,7 @@ src_compile() {
 }
 
 src_test() {
-	local target="check"
+	local target="test"
 	emake ${target}
 }
 
